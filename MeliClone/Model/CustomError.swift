@@ -11,4 +11,5 @@ enum CustomError: String, Error {
     case CategoryNotFound = "No se encontró la categoria deseada"
     case ItemNotFound = "El item solicitado no se pudo encontrar"
     case APIError = "Ocurrio un error en una peticion"
+    case DescriptionNotFound = "No se encontró descripcion para el producto"
 }

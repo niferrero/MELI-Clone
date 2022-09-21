@@ -8,7 +8,7 @@
 import UIKit
 
 class InicioViewController: UIViewController {
-    private let viewModel = tableViewModel()
+    private let viewModel = TableViewModel(service: TableService())
     
     // MARK: - Elementos Visuales
     private lazy var spinner: UIActivityIndicatorView = .load() { element in

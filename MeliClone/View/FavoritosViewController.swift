@@ -8,7 +8,7 @@
 import UIKit
 
 class FavoritosViewController: UIViewController {
-    private let viewModel = favoritesViewModel()
+    private let viewModel = FavoritesViewModel(service: TableService())
     
     // MARK: - Elementos Visuales
     private lazy var spinner: UIActivityIndicatorView = .load() { element in

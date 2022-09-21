@@ -1,27 +1,32 @@
 //
-//  tableViewModel.swift
+//  favoritesViewModel.swift
 //  MeliClone
 //
-//  Created by Nicolas Alejandro Ferrero on 18/09/2022.
+//  Created by Nicolas Alejandro Ferrero on 20/09/2022.
 //
 
 import Foundation
 
-class tableViewModel {
+class FavoritesViewModel {
     var items = Bindable<[APIResponseMultiget]>()
     var error = Bindable<CustomError>()
     var isSearching = Bindable<Bool>()
+    var service: TableMethods
     
-    func getData(category: String) {
+    init(service: TableMethods) {
+        self.service = service
+    }
+    
+    func getFavorites(ids: String) {
         isSearching.value = true
-        ApiCaller.shared.getTable(categoryName: category) { [weak self] result in
+        service.getFavorites(ids: ids) { [weak self] result in
             switch result {
                 case .success(let data):
                     self?.items.value = data
                     self?.isSearching.value = false
                 case .failure(let error):
-                    self?.isSearching.value = false 
-                    self?.error.value = error
+                    self?.isSearching.value = false
+                    self?.error.value = error == .ItemNotFound ? nil : error
             }
         }
     }

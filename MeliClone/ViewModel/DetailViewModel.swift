@@ -6,14 +6,19 @@
 //
 
 import Foundation
-class detailViewModel {
+class DetailViewModel {
     var description = Bindable<String>()
     var error = Bindable<CustomError>()
     var isSearching = Bindable<Bool>()
+    var service: ProductMethods
+    
+    init(service: ProductMethods) {
+        self.service = service
+    }
     
     func getData(itemId: String) {
         isSearching.value = true
-        ApiCaller.shared.fetch(url: "items/PARAM/description", param: itemId, model: APIDescriptionResponse.self) { [weak self] result in
+        service.getDescription(itemId: itemId) { [weak self] result in
             switch result {
                 case .success(let data):
                     self?.description.value = data.plainText

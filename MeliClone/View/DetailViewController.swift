@@ -9,7 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     var data: Body?
-    private let viewModel = detailViewModel()
+    private let viewModel = DetailViewModel(service: ProductService())
     
     // MARK: - Elementos Visuales
     private lazy var spinner: UIActivityIndicatorView = .load() { element in
@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
     }
     
     private lazy var navigationIcon: UIImageView = .load() { element in
-        element.image = UIImage(systemName: "mappin")
+        element.image = UIImage(named: "dotMap")
         element.tintColor = .black
     }
     
@@ -36,7 +36,7 @@ class DetailViewController: UIViewController {
         element.axis = .horizontal
         element.spacing = UIStackView.spacingUseSystem
         element.isLayoutMarginsRelativeArrangement = true
-        element.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 0)
+        element.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 15, leading: 15, bottom: 15, trailing: 0)
         element.addArrangedSubview(navigationIcon)
         element.addArrangedSubview(navigationLabel)
         view.addSubview(element)
@@ -109,7 +109,7 @@ class DetailViewController: UIViewController {
     }()
     
     private lazy var shareButton: MELIButton = {
-        let btn = MELIButton(text: "Compartir", icon: UIImage(systemName: "paperclip"), .Link)
+        let btn = MELIButton(text: "Compartir", icon: UIImage(named: "share"), .Link)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
