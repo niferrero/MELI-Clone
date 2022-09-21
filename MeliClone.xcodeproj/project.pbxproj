@@ -35,8 +35,19 @@
 		AEB699C628DAB0020084D644 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB699C528DAB0020084D644 /* FavoritesViewModel.swift */; };
 		AEB699CA28DB8F930084D644 /* TableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB699C928DB8F930084D644 /* TableService.swift */; };
 		AEB699CC28DB962F0084D644 /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB699CB28DB962F0084D644 /* ProductService.swift */; };
+		AEB699D428DBC6380084D644 /* MeliCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB699D328DBC6380084D644 /* MeliCloneTests.swift */; };
 		AEDA3AB128DA91870081F36D /* BindableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDA3AB028DA91870081F36D /* BindableClass.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AEB699D528DBC6380084D644 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE1BDFB528D76E030048F11D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE1BDFBC28D76E030048F11D;
+			remoteInfo = MeliClone;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AE1BDFBD28D76E030048F11D /* MeliClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeliClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,11 +80,20 @@
 		AEB699C528DAB0020084D644 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		AEB699C928DB8F930084D644 /* TableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableService.swift; sourceTree = "<group>"; };
 		AEB699CB28DB962F0084D644 /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		AEB699D128DBC6380084D644 /* MeliCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEB699D328DBC6380084D644 /* MeliCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeliCloneTests.swift; sourceTree = "<group>"; };
 		AEDA3AB028DA91870081F36D /* BindableClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AE1BDFBA28D76E030048F11D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB699CE28DBC6380084D644 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				AE1BDFBF28D76E030048F11D /* MeliClone */,
+				AEB699D228DBC6380084D644 /* MeliCloneTests */,
 				AE1BDFBE28D76E030048F11D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				AE1BDFBD28D76E030048F11D /* MeliClone.app */,
+				AEB699D128DBC6380084D644 /* MeliCloneTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +205,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		AEB699D228DBC6380084D644 /* MeliCloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEB699D328DBC6380084D644 /* MeliCloneTests.swift */,
+			);
+			path = MeliCloneTests;
+			sourceTree = "<group>";
+		};
 		AEDA3AAF28DA91710081F36D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +242,24 @@
 			productReference = AE1BDFBD28D76E030048F11D /* MeliClone.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AEB699D028DBC6380084D644 /* MeliCloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEB699D728DBC6380084D644 /* Build configuration list for PBXNativeTarget "MeliCloneTests" */;
+			buildPhases = (
+				AEB699CD28DBC6380084D644 /* Sources */,
+				AEB699CE28DBC6380084D644 /* Frameworks */,
+				AEB699CF28DBC6380084D644 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AEB699D628DBC6380084D644 /* PBXTargetDependency */,
+			);
+			name = MeliCloneTests;
+			productName = MeliCloneTests;
+			productReference = AEB699D128DBC6380084D644 /* MeliCloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -224,6 +272,10 @@
 				TargetAttributes = {
 					AE1BDFBC28D76E030048F11D = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					AEB699D028DBC6380084D644 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = AE1BDFBC28D76E030048F11D;
 					};
 				};
 			};
@@ -241,6 +293,7 @@
 			projectRoot = "";
 			targets = (
 				AE1BDFBC28D76E030048F11D /* MeliClone */,
+				AEB699D028DBC6380084D644 /* MeliCloneTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +305,13 @@
 			files = (
 				AE1BDFCD28D76E050048F11D /* LaunchScreen.storyboard in Resources */,
 				AE1BDFCA28D76E050048F11D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEB699CF28DBC6380084D644 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +352,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AEB699CD28DBC6380084D644 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB699D428DBC6380084D644 /* MeliCloneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AEB699D628DBC6380084D644 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE1BDFBC28D76E030048F11D /* MeliClone */;
+			targetProxy = AEB699D528DBC6380084D644 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AE1BDFCB28D76E050048F11D /* LaunchScreen.storyboard */ = {
@@ -474,6 +550,42 @@
 			};
 			name = Release;
 		};
+		AEB699D828DBC6380084D644 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFWN9JLJVU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Alkemy.MeliCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeliClone.app/MeliClone";
+			};
+			name = Debug;
+		};
+		AEB699D928DBC6380084D644 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AFWN9JLJVU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Alkemy.MeliCloneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MeliClone.app/MeliClone";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -491,6 +603,15 @@
 			buildConfigurations = (
 				AE1BDFD228D76E050048F11D /* Debug */,
 				AE1BDFD328D76E050048F11D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEB699D728DBC6380084D644 /* Build configuration list for PBXNativeTarget "MeliCloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEB699D828DBC6380084D644 /* Debug */,
+				AEB699D928DBC6380084D644 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

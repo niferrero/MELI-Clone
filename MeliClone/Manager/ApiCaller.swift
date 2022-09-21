@@ -9,7 +9,7 @@ import Foundation
 
 class ApiCaller {
     private static let BASE_URL = "https://api.mercadolibre.com/"
-    private static let ACCESS_TOKEN = "APP_USR-6736820626071391-092114-e22d0cf6311831c42bc3de4563db89bb-113702612"
+    private static let ACCESS_TOKEN = "APP_USR-6736820626071391-092118-bb5c1ed424b0faac7ef1ea93b4246fe0-113702612"
     static let shared = ApiCaller()
     
     private init() {}
